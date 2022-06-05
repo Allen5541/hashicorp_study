@@ -60,6 +60,7 @@ build {
   # Install brew
   provisioner "shell" {
     inline = [
+      "echo Installing Brew",
       "/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"",
       "echo 'eval \"$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)\"' >> /home/ubuntu/.profile",
       "sudo apt-get install -y build-essential"
@@ -69,6 +70,7 @@ build {
   # Install Docker
   provisioner "shell" {
     inline = [
+      "echo Installing Docker",
       "sudo apt-get update -y",
       "sudo apt-get install -y docker.io",
       "sudo systemctl start docker",
@@ -78,11 +80,12 @@ build {
   }
 
   # Install Minikube
-  provisioner "shell" {
-    inline = [
-      "brew install minikube",
-    ]
-  }
+#  provisioner "shell" {
+#    inline = [
+#      "echo Installing minikube",
+#      "brew install minikube",
+#    ]
+#  }
 }
 
 
