@@ -41,3 +41,5 @@ snap install kubectl --classic
 minikube start
 kubectl proxy --address 0.0.0.0 --accept-hosts='^.*'
 ```
+# Start minikube
+- need setup firewall rule for allow ingress of my laptop external ip

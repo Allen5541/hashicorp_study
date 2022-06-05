@@ -75,7 +75,7 @@ build {
       "sudo apt-get install -y docker.io",
       "sudo systemctl start docker",
       "sudo systemctl enable docker",
-      "sudo chmod 755 /var/run/docker.sock"
+      "sudo chmod 666 /var/run/docker.sock"
     ]
   }
 
@@ -83,7 +83,7 @@ build {
 #  provisioner "shell" {
 #    inline = [
 #      "echo Installing minikube",
-#      "brew install minikube",
+#      "brew install minikube"
 #    ]
 #  }
 }
