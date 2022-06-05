@@ -1,0 +1,8 @@
+project_id = "packer-352403"
+source_image_family = "ubuntu-1804-lts"
+image_family = "packer-ubuntu-gcp"
+image_name   = "packer-ubuntu-gcp-{{timestamp}}"
+image_description = "Ubuntu 20-04 Image with Ngnix-{{timestamp}}"
+ssh_username = "ubuntu"
+zone = "asia-east2-a"
+account_file = "/Users/zhangmin/.ssh/key.json"
